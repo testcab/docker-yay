@@ -1,5 +1,5 @@
 FROM archlinux/base
-MAINTAINER test.cab <git@test.cab>
+LABEL maintainer="test.cab <git@test.cab>"
 
 RUN pacman -Syu --needed --noconfirm \
   base-devel \
