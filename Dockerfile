@@ -10,8 +10,8 @@ RUN pacman -Syu --needed --noconfirm \
 
 # makepkg user and workdir
 ARG user=makepkg
-RUN useradd -m $user
-RUN echo "$user ALL=(ALL:ALL) NOPASSWD:ALL" > /etc/sudoers.d/$user
+RUN useradd -m $user \
+  && echo "$user ALL=(ALL:ALL) NOPASSWD:ALL" > /etc/sudoers.d/$user
 USER $user
 WORKDIR /home/$user
 
