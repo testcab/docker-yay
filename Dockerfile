@@ -1,12 +1,7 @@
-FROM archlinux/archlinux
+FROM archlinux/archlinux:base-devel
 LABEL maintainer="test.cab <git@test.cab>"
 
-RUN pacman -Syu --needed --noconfirm \
-  base-devel \
-  # We use git to install yay; it's also a dependency of yay.
-  git \
-  # makepkg does not run as root
-  sudo
+RUN pacman -Syu --needed --noconfirm git
 
 # makepkg user and workdir
 ARG user=makepkg
