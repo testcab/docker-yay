@@ -1,4 +1,4 @@
-FROM archlinux/base
+FROM archlinux/archlinux
 LABEL maintainer="test.cab <git@test.cab>"
 
 RUN pacman -Syu --needed --noconfirm \
