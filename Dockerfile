@@ -5,7 +5,7 @@ RUN pacman -Syu --needed --noconfirm git
 
 # makepkg user and workdir
 ARG user=makepkg
-RUN useradd -m $user \
+RUN useradd --system --create-home $user \
   && echo "$user ALL=(ALL:ALL) NOPASSWD:ALL" > /etc/sudoers.d/$user
 USER $user
 WORKDIR /home/$user

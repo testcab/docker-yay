@@ -5,6 +5,8 @@
 
 Docker image for Arch Linux with yay installed, useful for AUR packaging and development.
 
+A `makepkg` user (uid=974, gid=974) is created with sudo privilege for use with *yay* and *makepkg* commands.
+
 This docker image is auto updated as [archlinux/base](https://hub.docker.com/r/archlinux/base) image updates.
 
 ### Run as a container
